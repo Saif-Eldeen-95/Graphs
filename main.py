@@ -34,7 +34,16 @@ print("DFS:", dfs(graph, 1))
 
 print("\n=== Topological Sort ===")
 
-dag = {7:[5,6], 5:[2,4], 6:[4,3], 2:[1], 3:[1], 4:[0], 1:[0], 0:[]}
+dag = {
+       7:[5,6], 
+       5:[2,4], 
+       6:[4,3], 
+       2:[1], 
+       3:[1], 
+       4:[0], 
+       1:[0], 
+       0:[]
+       }
 print("Topological sort:", topological_sort(dag, [0,1,2,3,4,5,6,7]))
 
 dag = {

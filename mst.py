@@ -1,6 +1,5 @@
 import heapq
 
-
 def prims_mst(graph, start):
     visited      = set()
     min_heap     = [(0, start, None)]
@@ -20,6 +19,6 @@ def prims_mst(graph, start):
                 heapq.heappush(min_heap, (edge_weight, neighbor, node))
 
     if len(visited) != len(graph):
-        raise ValueError(f"Graph not fully connected. Reached {len(visited)}/{len(graph)} nodes from '{start}'.")
+        raise ValueError(f"Graph not fully connected.")
 
     return mst_edges, total_weight
